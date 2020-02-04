@@ -36,3 +36,8 @@ stages:
         dockerfile: $(dockerfilePath)
         tags: |
           $(tag)
+    - task: AzureKeyVault@1
+      inputs:
+        azureSubscription: 'Azure for Students(6f767819-5caa-4441-acde-10dfc5b17b96)'
+        KeyVaultName: 'LMILLERTenableKeyVault'
+        SecretsFilter: '*'
